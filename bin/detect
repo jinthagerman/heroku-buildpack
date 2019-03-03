@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 # bin/detect <build-dir>
 
-PACKAGE="$1/${VAPOR_DIR}/Package.swift"
-echo "$PACKAGE"
-if [[ -f $PACKAGE ]]; then
+if [[ -f "$1/backend/Package.swift" ]]; then
   echo "Swift" && exit 0
 else
   echo "no" && exit 1
